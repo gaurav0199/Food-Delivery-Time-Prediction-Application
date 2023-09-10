@@ -1,0 +1,10 @@
+Data Ingestion: 1st define some variables in src\constants
+2nd connect all fiels for connecting we write code in config\configuration.py file 
+3rd Now we start data ingestion 
+
+In artifact folder we store all outputs(like;downloaded raw data,data ingestion,
+data transformation etc pipline)
+
+
+Data Transformation: We do complete feature engineering here
+constan file ->configuration file ->data transformation ->if required, we will create helper function in utils file ->data transformation

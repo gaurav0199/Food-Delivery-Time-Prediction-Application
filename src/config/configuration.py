@@ -1,0 +1,35 @@
+import os,sys
+from src.constants import *
+
+ROOT_DIR=ROOT_DIR_KEY
+
+DATASET_PATH=os.path.join(ROOT_DIR,DATA_DIR,DATA_DIR_KEY)
+#OR we can give direct path copy from local but if we give this code to someone may be their path
+#will be different so this is not good practise
+
+
+RAW_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTION_KEY,CURRENT_TIME_STAMP,
+                            DATA_INGESTION_RAW_DATA_DIR,RAW_DATA_DIR_KEY)
+
+
+TRAIN_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTION_KEY,CURRENT_TIME_STAMP,
+                            DATA_INGESTION_INGESTED_DATA_DIR_KEY,TRAIN_DATA_DIR_KEY)
+
+TEST_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_INGESTION_KEY,CURRENT_TIME_STAMP,
+                            DATA_INGESTION_INGESTED_DATA_DIR_KEY,TEST_DATA_DIR_KEY)
+
+
+
+
+# Data Transformation steps
+PREPROCESSING_OBJ_FILE=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_TRANSFORMATION_ARTIFACT,
+                                    DATA_PREPROCEED_DIR,DATA_TRANSFORMATION_PROCESSING_OBJ)
+
+TRANSFORM_TRAIN_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_TRANSFORMATION_ARTIFACT,
+                                        DATA_TRANSFORM_DIR,TRANSFORM_TRAIN_DIR_KEY)
+
+TRANSFORM_TEST_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_TRANSFORMATION_ARTIFACT,
+                                        DATA_TRANSFORM_DIR,TRANSFORM_TEST_DIR_KEY)
+
+FEATURE_ENGG_OBJ_FILE_PATH=os.path.join(ROOT_DIR,ARTIFACT_DIR_KEY,DATA_TRANSFORMATION_ARTIFACT,
+                                        DATA_PREPROCEED_DIR,'feature_engg.pkl')

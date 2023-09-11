@@ -150,6 +150,7 @@ class DataTransformation:
 
             traget_columns_name = "Time_taken (min)"
 
+            logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train = train_df.drop(columns = traget_columns_name, axis = 1)
             y_train = train_df[traget_columns_name]
 

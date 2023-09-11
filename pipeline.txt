@@ -8,3 +8,11 @@ data transformation etc pipline)
 
 Data Transformation: We do complete feature engineering here
 constan file ->configuration file ->data transformation ->if required, we will create helper function in utils file ->data transformation
+
+
+Model Training:
+steps-
+constant ->we define variables
+configuration ->configure all variables(connect all variables)
+Model Training
+utils file (create helper fun if needed)

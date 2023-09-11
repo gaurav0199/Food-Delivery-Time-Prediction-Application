@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from src.logger import logging
 from src.exception import CustomException
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -61,16 +62,23 @@ class DataIngestion:
 #     train_data,test_data=obj.inititate_data_ingestion()
 
 
-
-if __name__ == "__main__":
-   obj = DataIngestion()
-   train_data, test_data = obj.inititate_data_ingestion()
-
-   data_transformation=DataTransformation()
-   train_arr, test_arr,_ = data_transformation.inititate_data_transformation(train_data, test_data)
-
+#Data Transformation
 # if __name__ == "__main__":
-#     obj = DataIngestion()
-#     train_data_path,test_data_path=obj.iniitiate_data_ingestion()
-#     data_transformation = DataTransformation()
-#     train_arr,test_arr,_ = data_transformation.inititate_data_transformation(train_data_path,test_data_path)
+#    obj = DataIngestion()
+#    train_data, test_data = obj.inititate_data_ingestion()
+
+#    data_transformation=DataTransformation()
+#    train_arr, test_arr,_ = data_transformation.inititate_data_transformation(train_data, test_data)
+
+
+
+# Model Trainging
+if __name__ == "__main__":
+    obj = DataIngestion()
+    train_data_path,test_data_path=obj.inititate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    train_arr,test_arr,_ = data_transformation.inititate_data_transformation(train_data_path,test_data_path)
+
+    model_trainer=ModelTrainer()
+    print(model_trainer.inititate_model_traing(train_arr,test_arr))

@@ -1,7 +1,7 @@
 from flask import Flask
 from src.logger import logging
 from src.exception import CustomException
-import os,sys
+import os, sys
 
 app=Flask(__name__)
 @app.route("/",methods=["GET","POST"])
@@ -12,7 +12,7 @@ def index():
         raise Exception("We are testing our exception file")#error
     
     except Exception as e:
-        ml=CustomException(e,sys)#error message and detail
+        ml = CustomException(e, sys)#e- error message and sys- error detail
         logging.info(ml.error_message)
 
         logging.info("We are testing our logging file")

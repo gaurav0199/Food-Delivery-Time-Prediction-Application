@@ -1,6 +1,6 @@
 # Also can create folders and files manually by clicking icon But here we write a script to generate files and folders 
 
-import os,sys
+import os, sys
 from pathlib import Path
 import logging
 
@@ -38,10 +38,10 @@ for filepth in list_of_files:
     if filedir !="":
         os.makedirs(filedir,exist_ok=True)#if file exist then skip this part (exist_ok=True)
 
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath,'w') as f:
             pass
 
     else:
-        logging.info('file is already present at :{filepath}')
+        logging.info('file is already present at : {filepath}')
         
